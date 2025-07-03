@@ -1,23 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      "@": resolve(__dirname, "./src"),
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
         },
       },
     },
@@ -25,8 +25,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
+      "/api": {
+        target: "http://localhost:3001",
         changeOrigin: true,
       },
     },
@@ -34,4 +34,4 @@ export default defineConfig({
   preview: {
     port: 4173,
   },
-}) 
+});

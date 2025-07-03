@@ -27,5 +27,12 @@
     }
   },
   "include": ["src", "vitest.setup.ts"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "node_modules"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
-} 
+}
