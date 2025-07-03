@@ -1,0 +1,7 @@
+name = "express-api-worker"
+type = "javascript"
+main = "./src/index.ts"
+compatibility_date = "2024-05-01"
+account_id = "435240a3a24208e2a108102c7e62a43d"
+workers_dev = true
+route = "" 
